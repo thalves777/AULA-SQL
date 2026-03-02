@@ -1,0 +1,19 @@
+CREATE TABLE viloes (
+    nome VARCHAR(50) NOT NULL,
+    crimes_cometidos  VARCHAR(20) NOT NULL,
+    patrimonio_roubado     INTEGER NOT NULL DEFAULT 0
+);
+
+-- Dados de exemplo para praticar os comandos DQL
+INSERT INTO viloes (nome, crimes_cometidos, patrimonio_roubado) VALUES
+    ('coringa', 'roubo ', 5000),
+    ('zeca urubu', 'muito manipulado', 150 ),
+    ('Manoel Gomes', 'Roubar Corações', 800 ); 
+     
+     -- Select all employees from the table
+SELECT * FROM viloes;
+
+-- Select all employees from the table
+SELECT nome, crimes_cometidos
+from viloes
+order by patrimonio_roubado desc;
